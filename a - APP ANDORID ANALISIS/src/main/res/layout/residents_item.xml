@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/activity_vertical_margin"
+    android:background="@drawable/backcolor"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/resident_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_weight="0.37"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/resident_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="[resident]"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/resident_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lines="1"
+            android:text="[mobile]"
+            android:textColor="@color/cool_grey"
+            android:textSize="16dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/resident_registered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[Registered]"
+            android:textColor="@color/strongray"
+            android:visibility="visible"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/resident_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[block]"
+            android:textColor="#F0524A"
+            android:visibility="visible"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resident_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/border_orange"
+            android:gravity="end"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="[Medium Text]"
+            android:textColor="@color/colorAccent"
+            android:textSize="11dp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

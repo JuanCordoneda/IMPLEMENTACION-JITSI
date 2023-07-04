@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="9dp">
+
+        <ImageView
+            android:id="@+id/contactImage"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar"
+            android:layout_width="40dp"
+            android:layout_margin="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:layout_weight="6">
+
+        <TextView
+            android:id="@+id/resident_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="[name]"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:lines="1"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Medium Text]"
+            android:id="@+id/contact_mobile"
+            android:textColor="@color/cool_grey"
+            android:textSize="14dp"
+            android:lines="1"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/match_other_contact"
+            android:id="@+id/contact_aux"
+            android:textColor="@color/colorAccent"
+            android:textSize="12dp"
+            android:lines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_tic"
+            android:id="@+id/tic_contact"
+            android:tint="@color/colorAccent"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

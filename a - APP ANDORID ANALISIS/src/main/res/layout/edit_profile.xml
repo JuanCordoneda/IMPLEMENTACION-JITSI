@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@color/white">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+		<include
+			android:id="@+id/toolbar"
+			layout="@layout/toolbar_main"
+			/>
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="@dimen/activity_vertical_margin"
+		android:layout_marginRight="@dimen/activity_vertical_margin"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/user_name"
+			android:fontFamily="@font/roboto_bold"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/activity_horizontal_margin"
+			android:gravity="center"
+			android:text="[user name]"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="@color/colorPrimary"
+			tools:ignore="HardcodedText" />
+
+		<TextView
+			android:id="@+id/textView2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/activity_vertical_margin"
+			android:layout_marginTop="@dimen/activity_vertical_margin"
+			android:gravity="center"
+			android:text="@string/update_your_data_here"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textSize="14sp" />
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="16dp"
+			app:hintAnimationEnabled="false"
+			app:hintEnabled="false">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:id="@+id/edit_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/edit_profile_name_placeholder"
+				android:lines="1"
+				android:singleLine="true" />
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input_last_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="16dp"
+			app:hintAnimationEnabled="false"
+			app:hintEnabled="false">
+
+			<EditText
+				android:id="@+id/edit_last_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/edit_profile_lastname_placeholder"
+				android:lines="1"
+				android:singleLine="true" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input_email"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="16dp"
+			app:hintAnimationEnabled="false"
+			app:hintEnabled="false">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:id="@+id/edit_email"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:hint="@string/edit_profile_email_placeholder"
+				android:inputType="textEmailAddress"
+				android:lines="1"
+				android:singleLine="true" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<TextView
+			android:id="@+id/textView20"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/activity_vertical_margin"
+			android:gravity="center_horizontal"
+			android:text="@string/all_fields_are_required"
+			android:textSize="12sp" />
+
+		<Button
+			android:id="@+id/btnEditAction"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/edit_profile_continue_button"
+			android:theme="@style/AppThemeForm.Button" />
+
+	</LinearLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:clickable="true"
+    android:background="@drawable/backcolor"
+    android:weightSum="10"
+    android:id="@+id/item">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center">
+
+        <TextView
+            android:text="[10]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/day"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+        android:text="[May.]"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/month"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="-3sp"
+        tools:ignore="HardcodedText" />
+
+        <TextView
+            android:text="[12:12:12]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="-3sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+        <TextView
+            android:text="[Parking]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parking"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:text="[Info]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/strongray"
+            android:id="@+id/info"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:text="[Payment Method]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/strongray"
+            android:id="@+id/payment_method"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:layout_marginRight="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[Amount]"
+            android:id="@+id/amount"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_marginTop="-3sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[Amount message]"
+            android:id="@+id/amount_message"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:layout_below="@id/amount"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</LinearLayout>

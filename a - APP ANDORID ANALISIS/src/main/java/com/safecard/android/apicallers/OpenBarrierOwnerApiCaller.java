@@ -1,0 +1,110 @@
+package com.safecard.android.apicallers;
+
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.util.Base64;
+import android.util.Log;
+
+import com.android.volley.Request;
+import com.safecard.android.Config;
+import com.safecard.android.Consts;
+import com.safecard.android.model.Models;
+import com.safecard.android.model.dataobjects.PropertyData;
+import com.safecard.android.utils.AsymmetricCryptoUtils;
+import com.safecard.android.utils.DeviceIdManager;
+import com.safecard.android.utils.LocationProvider;
+import com.safecard.android.utils.RequestVolley;
+import com.safecard.android.utils.Utils;
+import com.safecard.android.utils.WifiHelper;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+
+
+/**
+ * Created by alonso on 21/06/17.
+ */
+
+public final class OpenBarrierOwnerApiCaller extends ContextWrapper {
+    String TAG = "OpenBarrierOwnerApiCaller";
+
+    String url;
+
+    public OpenBarrierOwnerApiCaller(Context context) {
+        super(context);
+    }
+
+    public void doCall(int propertyId,
+                       String gateType,
+                       String gateCode,
+                       String gateName,
+                       final ApiCallback callback){
+
+        AsymmetricCryptoUtils ac = new AsymmetricCryptoUtils(getApplicationContext());
+        PropertyData property = Models.getAccessModel(getApplicationContext())
+                .getPropertyDAO().getProperty(propertyId);
+        if(!ac.exist()) {
+            Log.e(TAG, "!ac.exist");
+            return;
+        }
+
+        String mobile = Utils.getMobile(getApplicationContext());
+        long timestamp = System.currentTimeMillis() / 1000 + Utils.getDefaultInt("diff", getApplicationContext());
+        double lng = 0, lat = 0;
+        if(LocationProvider.getInstance().getMCurrentLocation() != null) {
+            lng = LocationProvider.getInstance().getMCurrentLocation().getLongitude();
+            lat = LocationProvider.getInstance().getMCurrentLocation().getLatitude();
+        }
+
+        try {
+            JSONObject body = new JSONObject();
+            body.put("rc_type", Consts.RC_TYPE_OWNER);
+            body.put("gate_code", gateCode);
+            body.put("gate_type", gateType);
+            body.put("lat", ""+lat);
+            body.put("long", ""+lng);
+            body.put("property_id",  property.getHouseId());
+            body.put("condo_id",  property.getCondoId());
+            body.put("timestamp", timestamp);
+
+            final JSONObject mixpanelData = new JSONObject();
+            mixpanelData.put("local_wifi_used", false);
+            url = Config.ApiUrl + "open/" + mobile;
+            if (WifiHelper.isLocal()) {
+                url = Config.ApiLocalUrl + "open/" + mobile;
+                mixpanelData.put("local_wifi_used", true);
+            }
+
+            final RequestVolley rqv = new RequestVolley(url, Request.Method.POST, body, getApplicationContext());
+            rqv.requestApi(new RequestVolley.VolleyJsonCallback() {
+                @Override
+                public void onSuccess(JSONObject response) {
+                    try {
+                        if (response.getString("result").equals("ACK")) {
+                            Utils.mixpanel.track("OPENING_BY_RC_BUTTON", mixpanelData);
+                            callback.callSuccess(response);
+                            return;
+                        }else {
+                            String msg = response.getString("msg");
+                            callback.callError("NACK", msg);
+                            return;
+
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    callback.callError("JSONException", "");
+                }
+
+                @Override
+                public void onError(String errorType, String msg) {
+                    callback.callError(errorType, msg);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+}

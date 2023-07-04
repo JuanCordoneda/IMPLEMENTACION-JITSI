@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item name="white" type="color">#ffffff</item>
+	<item name="white2" type="color">#f5f5f5</item>
+
+	<item name="gray" type="color">#f2f2f2</item>
+	<item name="strongray" type="color">#aaaaaa</item>
+	<item name="darkgray" type="color">#333333</item>
+	<item name="darkergray" type="color">#98999a</item>
+	<item name="cool_grey" type="color">#b5b2af</item>
+    <item name="gray_icon" type="color">#9E9E9E</item>
+
+	<color name="red" type="color">#F1431B</color>
+	<color name="green" type="color">#26A65B</color>
+
+	<item name="gray_days" type="color">#C6C5C5</item>
+	<item name="days_inactive" type="color">#eeeeee</item>
+
+    <color name="colorPrimary" type="color">#222931</color>
+	<color name="windowBackground" type="color">#202125</color>
+	<color name="colorPrimaryDark" type="color">#000000</color>
+	<color name="colorPrimaryDarkTranslucent" type="color">#20000000</color>
+	<color name="colorAccent" type="color">#e37222</color>
+
+	<color name="windowBackgroundForm" type="color">#FAFAFA</color>
+
+	<item name="indicator_unselected" type="color">#aaaaaa</item>
+
+	<item name="greenBlue" type="color">#03a678</item>
+	<item name="yellow" type="color">#eeaf1d</item>
+
+</resources>

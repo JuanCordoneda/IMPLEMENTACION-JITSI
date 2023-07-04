@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+		app:elevation="0dp">
+
+		<include
+			android:id="@+id/toolbar"
+			layout="@layout/toolbar_main"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+		android:id="@+id/contacts_list_container">
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<Button
+			android:id="@+id/choice_done_button"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end|center"
+			android:text="@string/activity_contacts_continue_button"
+			android:theme="@style/AppThemeForm.Button"/>
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/menu"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	    
+	    <include
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentBottom="false"
+	        android:layout_centerHorizontal="true"
+	        layout="@layout/menu"
+            android:id="@+id/buttom_menu">
+
+		</include>
+		
+	</LinearLayout>
+	
+</LinearLayout>

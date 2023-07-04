@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_property"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectores_acceso"
+        android:orientation="vertical"
+        android:baselineAligned="true">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:tabIndicatorHeight="2dp"
+            android:fillViewport="false"
+            app:tabMode="scrollable"
+            android:longClickable="true"
+            android:background="@color/colorPrimary"
+            android:visibility="visible"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/cool_grey"
+            app:tabTextAppearance="@style/CustomTabText"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="[Invitación de [Invitador] a [Recinto / Propiedad] desde el [4 sep. 2016] hasta el [6 ago. 2016] entre [12:00 hrs.] y [18:30 hrs.] para [Mar, Jue, Vie.].]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/summary"
+            android:textColor="@color/cool_grey"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="12dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.safecard.android">
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" tools:node="remove"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove"/>
+
+    <application
+        android:name=".MainApp"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:usesCleartextTraffic="${usesCleartextTraffic}"
+        >
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.AppLinkManagerActivity"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:theme="@style/AppSplashTheme"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https"
+                    android:host="www.safecard.cl"
+                    android:pathPrefix="/app" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.TourActivity"
+            android:label="Tour"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SmsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name=".activities.VerifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm" />
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="Ingreso"
+            android:screenOrientation="portrait" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:label="Registro"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Change Pin Activity -->
+        <activity
+            android:name=".activities.RegisterPinActivity"
+            android:label="Pin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm" />
+
+        <!-- Invitation Activity -->
+        <activity
+            android:name=".activities.InvitationActivity"
+            android:label="Invitaciones"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <!-- REMOTE CONTROL VISIT Activity -->
+        <activity
+            android:name=".activities.AccessVisitActivity"
+            android:label="Control remoto invitacion"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <!-- Access Activity -->
+        <!-- android:theme="@android:style/Theme.Holo.Light.NoActionBar" -->
+        <activity
+            android:name=".activities.AccessActivity"
+            android:label=""
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <!-- Log Activity -->
+        <activity
+            android:name=".activities.LogActivity"
+            android:label="Logs"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label=""
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name=".activities.UpdatePinActivity"
+            android:label="Actualizar contraseña"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name=".activities.UpdateAccountActivity"
+            android:label="Actualizar cuenta"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:label="Notificaciones"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="Acerca de"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name=".activities.ContactsActivity"
+            android:label="Invitar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_contacts" />
+        </activity>
+        <activity
+            android:name=".activities.ResidentsActivity"
+            android:label="Residentes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ContactResidentActivity"
+            android:label="Residente"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_contacts" />
+        </activity>
+        <activity
+            android:name=".activities.ConfirmResidentActivity"
+            android:label="Confirmar residente"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ShareInvitationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SectorsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AdvancedConfigurationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AccessTypeDefaultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.NewPlateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm" />
+        <activity
+            android:name=".activities.ListPlateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.InitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HousesResidentsActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCZbNFqw2o2lfUZFl3Dg0KtrI_uOW3gr-o" />
+
+        <activity
+            android:name=".activities.DefaultsAccessTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OtherDeviceActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ObsoleteVersionActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.GeoHousesActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.TermsActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.WebPayEnrollmentAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ParkingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WebPayEnrollmentUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WebPayEnrollmentWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ParkingMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BillingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PickContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.InvitationCustomizationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PickSectorsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PickPropertiesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PickPhoneNumbersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.IncomingCallActivity"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

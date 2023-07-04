@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backcolor"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="14dp"
+    android:paddingEnd="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingTop="14dp"
+    android:weightSum="10"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/condo_name"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|start"
+            android:lines="1"
+            android:text="[Recinto]"
+            android:textColor="@color/cool_grey"
+            android:textSize="14dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/house_name"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|start"
+            android:lines="1"
+            android:text="[Propiedad]"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        android:id="@+id/end_image_container">
+
+
+        <TextView
+            android:id="@+id/geolocated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/property_plates_item_geolocated"
+            android:textColor="@color/darkergray"
+            android:textSize="14sp"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ic_tic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tic"
+            android:tint="@color/colorAccent"
+            android:visibility="visible"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/ic_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/com_mixpanel_android_ic_warning"
+            android:visibility="visible"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/ic_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right_white_24dp"
+            android:visibility="visible"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

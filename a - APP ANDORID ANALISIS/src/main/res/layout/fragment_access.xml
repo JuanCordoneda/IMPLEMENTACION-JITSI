@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:id="@+id/root"
+    android:layout_margin="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/QRLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:paddingTop="20dp"/>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/this_code_changes_every_x_seconds"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RCLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/debug_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnremote04"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/activity_vertical_margin" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnremote03"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/activity_vertical_margin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnremote02"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/activity_vertical_margin" />
+
+                <Button
+                    android:id="@+id/btnremote01"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/MsgLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/msg_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msg"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="[reason]"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/panel"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:id="@+id/panel_status">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:transitionGroup="true"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:text="@string/wi_fi"
+                    android:id="@+id/wifi_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_help"
+                    android:drawableRight="@drawable/ic_help"
+                    android:paddingRight="8dp"
+                    android:background="#000000"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"/>
+
+                <TextView
+                    android:text="@string/gps"
+                    android:id="@+id/gps_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_help"
+                    android:drawableRight="@drawable/ic_help"
+                    android:paddingRight="8dp"
+                    android:background="#000000"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/panel_control">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center_vertical|center_horizontal"
+                android:id="@+id/control_change"
+                android:layout_weight="4"
+                android:layout_margin="@dimen/activity_vertical_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/change_cr"
+                    android:src="@drawable/ic_change_cr"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/circle_control"
+                    android:layout_marginEnd="4dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/change_qr"
+                    android:src="@drawable/ic_change_qr"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/circle_control"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

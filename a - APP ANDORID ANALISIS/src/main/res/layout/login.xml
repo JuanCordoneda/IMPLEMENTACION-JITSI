@@ -1,0 +1,256 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
+    android:background="@color/colorPrimaryDark">
+
+    <EditText
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="4"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_weight="5">
+
+        <TextView
+            android:id="@+id/circle1"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_empty_circle"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/circle11"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            android:background="@drawable/ic_fill_circle"
+            />
+
+        <TextView
+            android:id="@+id/circle2"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_empty_circle"
+            />
+
+        <TextView
+            android:id="@+id/circle22"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_fill_circle"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/circle3"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_empty_circle"
+            />
+        <TextView
+            android:id="@+id/circle33"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_fill_circle"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/circle4"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_empty_circle"
+            />
+        <TextView
+            android:id="@+id/circle44"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_fill_circle"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/use_your_pin_to_unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:layout_gravity="bottom"
+        android:layout_weight="2">
+
+        <Button
+            style="@style/BtnPassword"
+            android:text="@string/number_1"
+            android:id="@+id/button1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:typeface="normal"
+            android:background="@drawable/button_background_selector" />
+
+        <Button
+            style="@style/BtnPassword"
+            android:background="@drawable/button_background_selector"
+            android:text="@string/number_2"
+            android:id="@+id/button2"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/button1"
+            android:layout_toEndOf="@+id/button1"
+            android:typeface="normal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            style="@style/BtnPassword"
+            android:text="@string/number_3"
+            android:id="@+id/button3"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/button2"
+            android:layout_toEndOf="@+id/button2"
+            android:typeface="normal"
+            android:background="@drawable/button_background_selector" />
+
+        <Button
+            style="@style/BtnPassword"
+            android:background="@drawable/button_background_selector"
+            android:text="@string/number_4"
+            android:id="@+id/button4"
+            android:layout_below="@+id/button1"
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_toStartOf="@+id/button2"
+            android:typeface="normal" />
+
+        <Button
+            style="@style/BtnPassword"
+            android:background="@drawable/button_background_selector"
+            android:text="@string/number_5"
+            android:id="@+id/button5"
+            android:layout_below="@+id/button1"
+            android:layout_toRightOf="@+id/button1"
+            android:layout_toEndOf="@+id/button1"
+            android:typeface="normal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            style="@style/BtnPassword"
+            android:background="@drawable/button_background_selector"
+            android:text="@string/number_6"
+            android:id="@+id/button6"
+            android:layout_below="@+id/button2"
+            android:layout_toRightOf="@+id/button2"
+            android:layout_toEndOf="@+id/button2"
+            android:typeface="normal" />
+
+        <Button
+            style="@style/BtnPassword"
+            android:background="@drawable/button_background_selector"
+            android:text="@string/number_7"
+            android:id="@+id/button7"
+            android:layout_below="@+id/button4"
+            android:layout_toLeftOf="@+id/button5"
+            android:layout_toStartOf="@+id/button5"
+            android:typeface="normal" />
+
+        <Button
+            android:background="@drawable/button_background_selector"
+            style="@style/BtnPassword"
+            android:text="@string/number_8"
+            android:id="@+id/button8"
+            android:layout_below="@+id/button4"
+            android:layout_toRightOf="@+id/button4"
+            android:layout_toEndOf="@+id/button4"
+            android:typeface="normal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:background="@drawable/button_background_selector"
+            style="@style/BtnPassword"
+            android:text="@string/number_9"
+            android:id="@+id/button9"
+            android:layout_below="@+id/button5"
+            android:layout_toRightOf="@+id/button5"
+            android:layout_toEndOf="@+id/button5"
+            android:typeface="normal" />
+
+        <Button
+            android:background="@drawable/button_background_selector"
+            style="@style/BtnPassword"
+            android:text="@string/number_0"
+            android:id="@+id/button0"
+            android:layout_below="@+id/button7"
+            android:layout_toRightOf="@+id/button7"
+            android:layout_toEndOf="@+id/button7"
+            android:typeface="normal"
+            android:allowUndo="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deletePin"
+            android:src="@drawable/ic_backspace"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="26dp"
+            android:layout_alignTop="@+id/button0"
+            android:layout_alignRight="@+id/button9"
+            android:layout_alignEnd="@+id/button9"
+            android:layout_marginRight="26dp"
+            android:layout_marginEnd="26dp" />
+
+        <ImageView
+            android:src="@drawable/ic_huella"
+            android:id="@+id/biometric_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button9"
+            android:layout_alignLeft="@+id/button7"
+            android:layout_alignTop="@+id/button0"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="26dp"
+            android:gravity="center_vertical|center_horizontal" />
+    </RelativeLayout>
+
+</LinearLayout>

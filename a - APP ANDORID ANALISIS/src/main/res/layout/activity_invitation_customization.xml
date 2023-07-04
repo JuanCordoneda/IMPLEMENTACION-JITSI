@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/view4"
+        app:elevation="0dp">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/tituloContenedor"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/invitation_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:drawableLeft="@drawable/ic_subject"
+            android:drawableStart="@drawable/ic_subject"
+            android:drawableTint="@color/gray_icon"
+            android:lines="1"
+            android:drawablePadding="16dp"
+            android:hint="@string/invitation_subject"
+            android:textColorHint="@color/cool_grey"
+            android:theme="@style/EditTextInvitation"
+            android:background="@android:color/transparent"
+            android:cursorVisible="true"
+            android:layout_margin="@dimen/activity_vertical_margin" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ededed"
+        android:id="@+id/title_separator"
+        android:layout_below="@+id/tituloContenedor"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll_form"
+        android:clickable="false"
+        android:visibility="visible"
+        android:fadeScrollbars="true"
+        android:fillViewport="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_separator">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/layout_form"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invitation_to"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/paso1"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:drawableStart="@drawable/ic_room"
+                    android:drawableLeft="@drawable/ic_room"
+                    android:drawableTint="@color/gray_icon"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="16dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp">
+
+                    <TextView
+                        android:text="[Condo]"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/condo_name"
+                        android:gravity="center_vertical"
+                        android:textSize="14dp"
+                        android:lines="1"
+                        android:textColor="@android:color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:text="[Property]"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/property_name"
+                        android:gravity="center_vertical"
+                        android:textSize="16dp"
+                        android:lines="1"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/condo_name"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_right_black"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                android:contextClickable="true"
+                android:id="@+id/recinto_separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invitation_valid_between_days"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/paso2"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_today"
+                    android:drawableLeft="@drawable/ic_today"
+                    android:drawableTint="@color/gray_icon"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="14dp"
+                    android:id="@+id/startdate_container">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/day_from"
+                        android:id="@+id/textView5"
+                        android:layout_weight="1"
+                        android:textColor="#aaaaaa"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:text="[StartDate]"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/label_start_date"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:id="@+id/enddate_container">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/day_to"
+                        android:id="@+id/textView7"
+                        android:layout_weight="1"
+                        android:textColor="#aaaaaa"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:text="[EndDate]"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/label_end_date"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                android:id="@+id/time_separator" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/repeat_days_layout"
+                android:layout_margin="@dimen/activity_vertical_margin">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/repeat_days"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/darkgray"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_days_of_week"
+                    android:layout_alignParentLeft="true"
+                    android:textOff=""
+                    android:lines="1"
+                    android:checked="true"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:drawableLeft="@drawable/ic_refresh"
+                    android:drawableTint="@color/gray_icon"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="16dp"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:alpha="0.3" />
+
+                <LinearLayout
+                    android:id="@+id/days_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:id="@+id/monday"
+                        style="@style/LabelDays"
+                        android:text="@string/monday_first_letter"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/tuesday"
+                        style="@style/LabelDays"
+                        android:text="@string/tuesday_first_letter"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/wednesday"
+                        style="@style/LabelDays"
+                        android:text="@string/wednesday_first_letter"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:id="@+id/thursday"
+                        style="@style/LabelDays"
+                        android:text="@string/thursday_first_letter"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="normal|bold" />
+                    <TextView
+                        android:id="@+id/friday"
+                        style="@style/LabelDays"
+                        android:text="@string/friday_first_letter"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/saturday"
+                        style="@style/LabelDays"
+                        android:text="@string/saturday_first_letter"
+                        android:layout_marginRight="8dp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/sunday"
+                        style="@style/LabelDays"
+                        android:text="@string/sunday_first_letter"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                android:id="@+id/days_separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/label_times"
+                android:layout_margin="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:drawableStart="@drawable/ic_query_builder"
+                        android:drawableLeft="@drawable/ic_query_builder"
+                        android:drawableTint="@color/darkergray"
+                        android:drawableTintMode="src_in"
+                        android:id="@+id/all_day"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_day"
+                        android:layout_alignParentLeft="true"
+                        android:textOff=""
+                        android:textOn=""
+                        android:clickable="true"
+                        android:lines="1"
+                        android:checked="false"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginBottom="14dp"
+                        android:textStyle="bold"
+                        android:drawablePadding="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="14dp"
+                    android:id="@+id/starttime_container">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/time_from"
+                        android:id="@+id/textView10"
+                        android:layout_weight="1"
+                        android:textColor="#aaaaaa"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp" />
+
+                    <TextView
+                        android:text="[StartTime]"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/label_start_time"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="14dp"
+                    android:id="@+id/endtime_container">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/time_to"
+                        android:id="@+id/textView11"
+                        android:layout_weight="1"
+                        android:textColor="#aaaaaa"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp" />
+
+                    <TextView
+                        android:text="[EndTime]"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/label_end_time"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16dp"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                android:contextClickable="true"
+                android:id="@+id/date_separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:id="@+id/sectors_lay">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allowed_sectors"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/paso5"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_pin_drop"
+                    android:drawableLeft="@drawable/ic_pin_drop"
+                    android:drawableTint="@color/gray_icon"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textStyle="normal|bold"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:text="[Sectores]"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/label_sectors"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:drawableRight="@drawable/ic_right_black"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:lines="1"
+                    android:textColor="#000000"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                android:id="@+id/sectors_separator" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:id="@+id/plate_lay">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:drawableStart="@drawable/ic_directions_car"
+                        android:drawableLeft="@drawable/ic_directions_car"
+                        android:drawableTint="@color/darkergray"
+                        android:drawableTintMode="src_in"
+                        android:id="@+id/plate_switch"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_a_plate"
+                        android:layout_alignParentLeft="true"
+                        android:textOff=""
+                        android:textOn=""
+                        android:clickable="true"
+                        android:lines="1"
+                        android:checked="false"
+                        android:gravity="left|center_vertical"
+                        android:textStyle="bold"
+                        android:drawablePadding="16dp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_plate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:text=""
+                        android:hint="@string/add_a_plate_placeholder"
+                        android:id="@+id/plateNumber"
+                        android:gravity="center"
+                        android:maxLength="6"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/plate_help_lay"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_margin_half">
+                <TextView
+                    android:text="@string/plate_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"
+                android:contextClickable="true"
+                android:id="@+id/plate_separator" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:text="@string/invitation_summary_tittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView21"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/invitation_summary_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/summary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stateListAnimator="@null"
+                    android:id="@+id/btnCrearInvitacion"
+                    android:text="@string/continue_button"
+                    android:layout_gravity="bottom"
+                    android:theme="@style/AppThemeForm.Button"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

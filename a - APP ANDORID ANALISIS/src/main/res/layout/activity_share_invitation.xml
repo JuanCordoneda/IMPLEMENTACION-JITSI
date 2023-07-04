@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_share_invitation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.safecard.android.activities.ShareInvitationActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/appBarLayout"
+        app:elevation="0dp"
+        android:background="@color/greenBlue">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greenBlue"
+        android:weightSum="1"
+        android:id="@+id/tic_layout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_tic_invitacion"
+            android:id="@+id/share_img"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:text="@string/invitation_created"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_invitation"
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_margin_half"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <TextView
+            android:text="[[Invitado] tiene Safecard por lo que le llegará una notificación.]"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/resume_invitation"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginBottom="40dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/roboto_medium"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:text="[También puedes enviar tu invitación por:]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_invitation"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="16dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_whatsapp"
+                android:id="@+id/wsp" />
+
+            <TextView
+                android:text="@string/whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_copy"
+                android:id="@+id/copy_link" />
+
+            <TextView
+                android:text="@string/copy_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:id="@+id/sms_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_sms"
+                android:id="@+id/send_sms" />
+
+            <TextView
+                android:text="@string/send_by_sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFAFA"
+        android:weightSum="1"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <Button
+            android:text="@string/activity_share_invitation_continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:theme="@style/AppThemeForm.Button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

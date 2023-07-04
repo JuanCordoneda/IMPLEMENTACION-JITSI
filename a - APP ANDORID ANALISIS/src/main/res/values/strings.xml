@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Safecard</string>
+
+    <string name="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="internet_connection">Verifique conexión a internet.</string>
+    <string name="no_privileges">No tienes privilegios para realizar esta acción</string>
+
+    <string name="monday_first_letter">L</string>
+    <string name="tuesday_first_letter">M</string>
+    <string name="wednesday_first_letter">X</string>
+    <string name="thursday_first_letter">J</string>
+    <string name="friday_first_letter">V</string>
+    <string name="saturday_first_letter">S</string>
+    <string name="sunday_first_letter">D</string>
+
+    <string name="monday_first3_letters">lun</string>
+    <string name="tuesday_first3_letters">mar</string>
+    <string name="wednesday_first3_letters">mie</string>
+    <string name="thursday_first3_letters">jue</string>
+    <string name="friday_first3_letters">vie</string>
+    <string name="saturday_first3_letters">sab</string>
+    <string name="sunday_first3_letters">dom</string>
+
+    <!-- start activity_invitation_customization -->
+    <string name="invitation_subject">Ingresa el motivo de la invitación</string>
+    <string name="invitation_to">Invitación a</string>
+    <string name="invitation_valid_between_days">Invitación válida</string>
+    <string name="day_from">Desde el</string>
+    <string name="day_to">Hasta el</string>
+    <string name="all_days_of_week">Para todos los días de la semana</string>
+    <string name="all_day">Por todo el día</string>
+    <string name="time_from">Desde las</string>
+    <string name="time_to">Hasta las</string>
+    <string name="allowed_sectors">Sectores permitidos</string>
+    <string name="add_a_plate">Ingresar patente</string>
+    <string name="add_a_plate_placeholder">Ingresa patente vehicular</string>
+    <string name="plate_info">Ingresa la patente vehicular de tu invitado para que pueda operar por reconocimiento de patentes</string>
+    <string name="invitation_summary_tittle">Resumen de la invitación</string>
+    <string name="invitation_summary_content">Invitación para [guest_name] a [property] desde el [start] hasta el [end]. Para [days] Desde las [start_time] hasta las [end_time]</string>
+    <string name="continue_button">Siguiente</string>
+    <!-- programmatically -->
+    <string name="invitation_customization_day_sunday">domingo</string>
+    <string name="invitation_customization_day_monday">lunes</string>
+    <string name="invitation_customization_day_tuesday">martes</string>
+    <string name="invitation_customization_day_wednesday">miércoles</string>
+    <string name="invitation_customization_day_thursday">Jueves</string>
+    <string name="invitation_customization_day_friday">viernes</string>
+    <string name="invitation_customization_day_saturday">sábado</string>
+    <string name="invitation_customization_required_field">Campo requerido</string>
+    <string name="invitation_customization_plate_format_not_valid">Formato de patente no válido</string>
+    <string name="invitation_customization_dialog_title">Invitación</string>
+    <string name="invitation_customization_dialog_day_is_not_in_date_range">El día %s no se encuentra dentro del rango de fechas definido.</string>
+    <string name="invitation_customization_dialog_ok">OK</string>
+    <string name="invitation_customization_validator_date_from_must_be_greater_or_equal_than_current_date">La fecha \'Desde\' debe ser mayor o igual a la fecha actual</string>
+    <string name="invitation_customization_validator_date_to_must_be_greater_or_equal_than_date_from">La fecha \'Hasta\' debe ser mayor o igual que la fecha \'Desde\'</string>
+    <string name="invitation_customization_validator_time_to_must_be_greater_than_time_from">La hora \'Hasta\' debe ser mayor que la hora \'Desde\'</string>
+    <string name="invitation_customization_validator_select_valid_days_of_week">Seleccione los días de la semana en los que será válida la invitación</string>
+    <string name="invitation_customization_validator_plate_required">Patente requerida</string>
+    <string name="invitation_customization_validator_must_add_plate_or_disable_switch">Debe ingresar patente o desactivar el switch</string>
+    <string name="invitation_customization_validator_plate_format_not_valid">Formato de patente no válido</string>
+    <string name="invitation_customization_validator_plate_format_not_valid2">Formato de patente no válido</string>
+    <string name="invitation_customization_validator_dialog_title">Invitación</string>
+    <string name="invitation_customization_validator_dialog_button_ok">OK</string>
+    <string name="invitation_customization_no_sector_selected">Ningún sector Seleccionado</string>
+    <string name="invitation_customization_all_sector_selected">Todos</string>
+    <string name="invitation_customization_pick_sectors_title">Sectores permitidos</string>
+    <!-- end activity_invitation_customization -->
+
+    <!-- start activity_about -->
+    <string name="safecard_url">www.safecard.cl</string>
+    <string name="support_email">soporte@safecard.cl</string>
+    <string name="backoffice_url">backoffice.safecard.cl</string>
+    <string name="terms_and_conditions">Términos y condiciones</string>
+    <string name="mission">Nuestra misión es lograr que tengas completo control del acceso a tu propiedad de manera autónoma, fácil y segura.</string>
+    <string name="mobiles">Teléfono: (56 2) 3221 1841 | (56 9) 6843 1099</string>
+    <!-- programmatically -->
+    <string name="activity_about_title">Acerca de</string>
+    <string name="activity_about_debuggable">Debuggable</string>
+    <string name="about_version">Version %s</string>
+    <string name="about_device">Device %s</string>
+    <string name="about_email">soporte@safecard.cl</string>
+    <string name="about_email_subject">Soporte Safecard Android</string>
+    <string name="about_send_mail">Enviar correo</string>
+    <string name="about_url_link_safecard">https://www.safecard.cl/</string>
+    <string name="about_url_link_backoffice">https://backoffice.safecard.cl/</string>
+    <string name="about_url_link_terms">https://www.safecard.cl/terms?lang=%s</string>
+    <!-- end activity_about -->
+
+    <!-- start activity_access -->
+    <!-- programmatically -->
+    <string name="activity_access_log_msg_title">Log</string>
+    <string name="activity_access_log_msg_no_properties">No tiene propiedades asociadas.</string>
+    <string name="activity_access_log_msg_ok_button">OK</string>
+    <string name="activity_access_log_msg_ok_button2">OK</string>
+    <string name="activity_access_call_phone_permission_title">Llamadas</string>
+    <string name="activity_access_call_phone_permission_msg">Para usar esta funcionalidad es necesario que otorgues permiso para hacer llamadas.</string>
+    <string name="activity_access_call_phone_permission_msg_ok_button">OK</string>
+    <string name="activity_access_call_phone_permission_msg_cancel_button">CANCELAR</string>
+    <!-- end activity_access -->
+
+    <!-- start activity_advanced_configuration -->
+    <string name="default_access">Acceso por defecto</string>
+    <string name="no_access_registered">No registra accesos</string>
+    <string name="default_sector">Sector por defecto</string>
+    <string name="default_access_type">Tipo de acceso por defecto</string>
+    <string name="geolocate_property">Georeferenciar propiedad</string>
+    <string name="geolocate_property_explanation">Guarda la ubicación de tu propiedad para compartir las coordenadas en tus invitaciones</string>
+    <string name="plate_bind">Vincular patente vehicular</string>
+    <!-- programmatically -->
+    <string name="activity_advanced_configuration_plate_service_not_available">Estimado residente la funcionalidad de acceso por auto reconocimiento de patentes no está activo en su recinto, para más información contacte a su administrador o escríbanos a ventas@safecard.cl</string>
+    <string name="activity_advanced_configuration_title">Configuración avanzada</string>
+    <string name="activity_advanced_configuration_you_dont_have_properties">Usted no posee propiedades</string>
+    <string name="activity_advanced_configuration_property_not_active">Propiedad no activa</string>
+    <string name="activity_advanced_configuration_no_properties">Sin Propiedades</string>
+    <string name="activity_advanced_configuration_already_geolocated">Esta propiedad ya fue geolocalizada. ¿Seguro quieres editar la geolocalización de la propiedad?</string>
+    <string name="activity_advanced_configuration_condo_no_geolocated">El recinto no ha sido geolocalizado. No se puede geolocalizar esta propiedad</string>
+    <string name="activity_advanced_configuration_no_privileges">No tienes privilegios para realizar esta acción</string>
+    <string name="activity_advanced_configuration_no_google">No disponible por el momento en dispositivos Huawei</string>
+    <!-- end activity_advanced_configuration -->
+
+    <!-- start activity_billing -->
+    <string name="last_movements">Últimos movimientos</string>
+    <string name="authorize_pending_payments">Autorizar pagos pendientes</string>
+    <!-- programmatically -->
+    <string name="activity_billing_title">Cartola de Parking</string>
+    <string name="activity_billing_sending_payment_authorization">Enviando autorización de pago</string>
+    <string name="activity_billing_successfully_charged">Se ha efectuado el cobro correctamente</string>
+    <string name="activity_billing_last_x_movements">ÚLTIMOS %d MOVIMIENTOS</string>
+    <!-- end activity_billing -->
+
+    <!-- start activity_geo_houses -->
+    <string name="confirm_your_location">Confirma tu ubicación correcta.</string>
+    <string name="confirm_button">Confirmar</string>
+    <!-- programmatically -->
+    <string name="activity_geo_houses_grant">Dar permiso</string>
+    <string name="geo_houses_edit_and_confirm_your_location">Edita y confirma tu ubicación correcta</string>
+    <string name="geo_houses_saving_your_location_wait_please">Guardando ubicación. Espere un momento.</string>
+    <string name="geo_houses_geolocation_successful">La propiedad fue geolocalizada exitosamente.</string>
+    <string name="geo_houses_geolocation_successful2">La propiedad fue geolocalizada exitosamente.</string>
+    <string name="geo_houses_condo_not_geolocated">Recinto no geolocalizado.</string>
+    <string name="geo_houses_drag_this_marker_to_your_house">Arrastra este marcador hasta tu propiedad.</string>
+    <string name="geo_houses_we_need_access_to_your_location">Safecard necesita acceder a tu ubicación.</string>
+    <!-- end activity_geo_houses -->
+
+    <!-- start activity_geo_parking -->
+    <string name="go_to_parking">Ir al parking</string>
+    <!-- end activity_geo_parking -->
+
+    <!-- start activity_init -->
+    <string name="wait_a_moment_while_loading_data">Espera un momento mientras cargamos tu información.</string>
+    <!-- end activity_init -->
+
+    <!-- start activity_new_plate -->
+    <string name="new_plate_explanation">Vincula la patente de tu vehículo para accionar la apertura de barreras sin necesidad de usar el control remoto u otro medio de apertura.</string>
+    <string name="plate_input_placeholder">Ingresa patente vehicular</string>
+    <string name="add_plate_button">Agregar patente</string>
+    <!-- programmatically -->
+    <string name="new_plate_title">Nueva patente</string>
+    <string name="new_plate_validation_enter_a_plate">Ingrese la patente</string>
+    <string name="new_plate_validation_plate_not_valid">Patente no es válida</string>
+    <string name="new_plate_validation_plate_not_valid2">Patente no es válida</string>
+    <string name="new_plate_validation_plate_not_valid3">Patente no es válida</string>
+    <string name="new_plate_registering_plate_wait_a_moment">Registrando patente. Espere un momento.</string>
+    <string name="new_plate_plate_added_successfully">Se agregó correctamente.</string>
+    <!-- end activity_new_plate -->
+
+    <!-- start activity_payment -->
+    <string name="payments_enable_text1">Ahora también accede y controla tus visitas a los parking con Safecard</string>
+    <string name="payments_enable_text2">Habilita tu acceso a parking y vive una experiencia mas cómoda y rápida</string>
+    <string name="payments_enable_button">Habilitar</string>
+    <!-- end activity_payment -->
+
+    <!-- start activity_pick_contacts -->
+    <string name="activity_pick_contacts_continue_button">Continuar</string>
+    <!-- programmatically -->
+    <string name="activity_pick_contacts_title_singular">Selecciona un contacto</string>
+    <string name="activity_pick_contacts_title_plural">Selecciona contactos</string>
+    <string name="activity_pick_contacts_select_a_contact">Seleccione un contacto</string>
+    <string name="activity_pick_contacts_select_only_one_contact">Seleccione solo un contacto</string>
+    <string name="activity_pick_contacts_select_one_contact_at_least">Seleccione al menos un contacto</string>
+    <string name="activity_pick_contacts_counting_continue_button">Continuar (%s)</string>
+    <!-- end activity_pick_contacts -->
+
+    <!-- start activity_sectors -->
+    <string name="sectors">Sectores</string>
+    <string name="activity_sectors_continue_button">Seleccionar</string>
+    <!-- programmatically -->
+    <string name="activity_sectors_title">Sectores permitidos</string>
+    <string name="activity_sectors_dialog_title">Sectores</string>
+    <string name="activity_sectors_dialog_select_one_sector_at_least">Debes seleccionar al menos un sector</string>
+    <string name="activity_sectors_dialog_ok_button">OK</string>
+    <!-- end activity_sectors -->
+
+    <!-- start activity_share_invitation -->
+    <string name="invitation_created">¡Invitación creada!</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="copy_link">Copiar vínculo</string>
+    <string name="send_by_sms">Enviar por SMS</string>
+    <string name="activity_share_invitation_continue_button">En otro momento</string>
+    <!-- programmatically -->
+    <string name="activity_share_invitation_title_share_again">¡Vuelve a compartir tu invitación!</string>
+    <string name="activity_share_invitation_share_again_by_using">Compartir nuevamente por:</string>
+    <string name="activity_share_invitation_also_share_by_using">También puedes enviar tu invitación por:</string>
+    <string name="activity_share_invitation_title_shared_successfully">¡Invitación enviada con éxito!</string>
+    <string name="activity_share_invitation_content_safecard_user">Tu invitado es usuario Safecard por lo que le llegará una notificiación con tu invitación.</string>
+    <string name="activity_share_invitation_title_created_successfully">¡Invitación creada!</string>
+    <string name="activity_share_invitation_content_no_safecard_user_">Tu invitado no es usuario Safecard por lo que debes enviarle la invitación por alguno de estos medios disponibles.</string>
+    <string name="activity_share_invitation_url_copied">Url copiada</string>
+    <string name="activity_share_invitation_link_copied">Vínculo copiado.</string>
+    <string name="activity_share_invitation_whatsapp_message">\"Abre este link para ver tu invitación Safecard \"</string>
+    <string name="activity_share_invitation_error_no_whatsapp">WhatsApp no está instalado en tu teléfono, no es posible compartir la invitación por este medio</string>
+    <string name="activity_share_invitation_share_with">Compartir con</string>
+    <string name="activity_share_invitation_sending_sms">Enviando SMS...</string>
+    <string name="activity_share_invitation_sms_sent">Mensaje SMS enviado.</string>
+    <string name="activity_share_invitation_sending_sms2">Enviando SMS...</string>
+    <string name="activity_share_invitation_sms_sent2">Mensaje SMS enviado.</string>
+    <!-- end activity_share_invitation -->
+
+    <!-- start activity_settings -->
+    <string name="label_residents">Residentes</string>
+    <string name="label_residents_explanation">Agrega nuevos residentes asociados a una propiedad y define sus permisos y perfiles de acceso</string>
+    <string name="label_advanced_configuration">Configuración avanzada</string>
+    <string name="label_advanced_configuration_explanation">Configura tu acceso por defecto, asocia patentes vehiculares y más opciones</string>
+    <string name="permissions_configuration">Configurar permisos</string>
+    <string name="permissions_configuration_explanation">Permite el acceso de Safecard a tus contactos, ubicación y al envío de notificaciones</string>
+    <string name="push_notifications">Notificaciones push</string>
+    <string name="push_notifications_explanation">Permitir notificaciones de acceso y alertas en tiempo real</string>
+    <string name="see_notifications">Ver notificaciones</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="update_pin">Cambiar PIN</string>
+    <string name="pin_block">Bloquear con PIN</string>
+    <string name="pin_block_explanation">Deberás ingresar tu PIN cada vez que abras Safecard (más seguro)</string>
+    <string name="activity_setting_payment_methods">Medios de pago</string>
+    <string name="credit_cards">Tarjetas de crédito</string>
+    <string name="about">Acerca de</string>
+    <!-- programmatically -->
+    <string name="activity_settings_title">Ajustes</string>
+    <string name="activity_settings_you_have_no_properties">Usted no tiene propiedades disponibles para ejecutar esta operación</string>
+    <string name="activity_settings_dialog_ok_button">OK</string>
+    <string name="activity_settings_dialog_cancel_button">CANCELAR</string>
+    <string name="activity_settings_dialog_block_using_pin">Bloquear con PIN</string>
+    <string name="activity_settings_pin_not_correct_cant_do_action">PIN incorrecto. No es posible ejecutar esta acción</string>
+    <!-- end activity_settings -->
+
+    <!-- start activity_terms -->
+    <string name="activity_terms_agree_button">Aceptar</string>
+    <!-- programmatically -->
+    <string name="activity_terms_title">Términos de uso y privacidad</string>
+    <!-- end activity_terms -->
+
+    <!-- start activity_update_pin -->
+    <string name="recommendation_about_pin">Te recomendamos por mayor seguridad cambiar tu PIN periódicamente.</string>
+    <string name="current_pin_placeholder">Ingresa PIN actual</string>
+    <string name="new_pin_placeholder">Ingresa tu PIN nuevo</string>
+    <string name="confirmation_pin_placeholder">Confirma tu PIN nuevo</string>
+    <string name="forgot_your_pin">¿Olvidó su código PIN?</string>
+    <string name="get_it_back_here">Recupéralo aquí</string>
+    <string name="activity_update_pin_continue">ACTUALIZAR</string>
+    <!-- programmatically -->
+    <string name="activity_update_pin_title">Cambiar PIN</string>
+    <string name="activity_update_pin_updating">Actualizando...</string>
+    <string name="activity_update_pin_current_pin_must_have_four_of_length">El PIN actual debe tener un largo de 4 dígitos</string>
+    <string name="activity_update_pin_new_pin_must_have_four_of_length">El PIN nuevo debe tener un largo de 4 dígitos</string>
+    <string name="activity_update_pin_confirmation_pin_must_have_four_of_length">El PIN de confirmación debe tener un largo de 4 dígitos</string>
+    <string name="activity_update_pin_pins_are_diferents">El PIN nuevo y de confirmación no son iguales</string>
+    <string name="activity_update_pin_pin_is_successfully_updated">Se cambió el PIN correctamente</string>
+    <string name="activity_update_pin_pin_is_invalid_try_again">El PIN actual es inválido, vuelve a intentar</string>
+    <!-- end activity_update_pin -->
+
+    <!-- start activity_webpay_enrollment_add -->
+    <string name="activity_webpay_enrollment_add_button">Agregar</string>
+    <!-- programmatically -->
+    <string name="activity_webpay_enrollment_add_wait_a_moment">Espere por Favor...</string>
+    <!-- end activity_webpay_enrollment_add -->
+
+    <!-- start activity_captcha -->
+    <string name="captcha_message">Ayúdanos a ser una app más segura. Para continuar necesitamos verificar que eres humano.</string>
+    <string name="activity_captcha_continue_button">Continuar</string>
+    <!-- end activity_captcha -->
+
+    <!-- start activity_register_pin -->
+    <string name="activity_register_pin_create_pin_label">Ingresa un código PIN de 4 dígitos</string>
+    <string name="activity_register_pin_new_pin_placeholder">Ingresa PIN</string>
+    <string name="activity_register_pin_confirmation_pin_placeholder">Confirma PIN</string>
+    <string name="activity_register_pin_use_pin_for">El código PIN se utiliza para:</string>
+    <string name="activity_register_pin_pin_usage_1">Acceder manualmente cuando no tienes tu teléfono celular o estás sin batería al momento del acceso.</string>
+    <string name="activity_register_pin_pin_usage_2">Abrir la aplicación en caso que tengas activado el bloqueo con PIN en tu perfil (más seguro).</string>
+    <string name="activity_register_pin_continue_button">¡LISTO!</string>
+    <!-- programmatically -->
+    <string name="activity_register_pin_title">Crea tu PIN</string>
+    <string name="activity_register_pin_updating_pin">Actualizando pin...</string>
+    <string name="activity_register_pin_pin_must_have_four_of_length">El pin debe tener un largo de 4 dígitos</string>
+    <string name="activity_register_pin_pin_must_have_four_of_length2">El pin debe tener un largo de 4 dígitos</string>
+    <string name="activity_register_pin_pins_are_diferents">Los pines ingresados son distintos</string>
+    <string name="activity_register_pin_pin_is_successfully_updated">Su PIN ha sido actualizado exitosamente</string>
+    <!-- end activity_register_pin -->
+
+    <!-- start check_pin -->
+    <string name="check_pin_current_pin">Ingresa PIN actual</string>
+    <!-- end check_pin -->
+
+    <!-- start confirm_resident -->
+    <string name="pick_contact">Selecciona contacto</string>
+    <string name="resident_admin_label">Residente Admin</string>
+    <string name="resident_admin_label_explanation">Este residente podrá crear nuevos residentes para esta propiedad, pero no podrá otorgar este mismo privilegio a estos residentes</string>
+    <string name="permanent_access">Acceso permanente</string>
+    <string name="confirm_resident_from_date">Desde el</string>
+    <string name="confirm_resident_to_date">Hasta el</string>
+    <string name="confirm_resident_allowed_sectors">Sectores permitidos</string>
+    <string name="confirm_resident_explanation2">Determina si este residente tiene acceso permanente o por un período de tiempo, como también a cuales sectores tendrá acceso</string>
+    <string name="can_see_all_history_log">Ver todo el historial de acceso</string>
+    <string name="can_see_all_history_log_explanation">Al activar esta opción, este residente podrá visualizar los movimientos de todos los residentes asociados a esta propiedad</string>
+    <string name="can_invite">Permitir invitar</string>
+    <string name="can_invite_explanation">Al activar esta opción este residente podrá crear invitaciones para esta propiedad</string>
+    <string name="confirm_resident_continue_button">Agregar residente</string>
+    <string name="unlock_user">Desbloquear</string>
+    <!-- programmatically -->
+    <string name="confirm_resident_explanation_time_sector">Determina si este residente tiene acceso permanente o por un período de tiempo</string>
+    <string name="confirm_resident_title_new_resident">Nuevo residente</string>
+    <string name="confirm_resident_block">Bloquear</string>
+    <string name="confirm_resident_enable">Desbloquear</string>
+    <string name="confirm_resident_resident_blocked">Residente bloqueado</string>
+    <string name="confirm_resident_edit_resident">Editar residente</string>
+    <string name="confirm_resident_save">Guardar</string>
+    <string name="confirm_resident_all">Todos</string>
+    <string name="confirm_resident_noone">Ninguno</string>
+    <string name="confirm_resident_resident_admin_has_access_to_all_sectors">Un Residente Admin tiene acceso a todos los sectores de la propiedad</string>
+    <string name="confirm_resident_title_resident">Residente</string>
+    <string name="confirm_resident_select_a_contact">Seleccione uno contacto</string>
+    <string name="confirm_resident_to_date_has_to_be_bigger_than_current">La fecha \'Hasta\' tiene que ser mayor o igual que la fecha actual</string>
+    <string name="confirm_resident_from_date_has_to_be_smaller_than_to_date">La fecha \'Desde\' tiene que ser menor o igual que la fecha \'Hasta\'</string>
+    <string name="confirm_resident_ok1">OK</string>
+    <string name="confirm_resident_ok2">OK</string>
+    <string name="confirm_resident_adding_resident">Agregando residente</string>
+    <string name="confirm_resident_updating_resident">Actualizando residente</string>
+    <string name="confirm_resident_resident_successfully_created">Residente creado con éxito</string>
+    <string name="confirm_resident_resident_successfully_updated">Residente editado con éxito.</string>
+    <string name="confirm_resident_sectors_all">Todos</string>
+    <string name="confirm_resident_no_sectors">No posee sectores</string>
+    <string name="confirm_resident_popup_title_confirm">Confirmar</string>
+    <string name="confirm_resident_popup_btn_block">BLOQUEAR</string>
+    <string name="confirm_resident_popup_btn_enable">DESBLOQUEAR</string>
+    <string name="confirm_resident_popup_question_block">¿Seguro quieres bloquear a %s?</string>
+    <string name="confirm_resident_popup_question_block_complement">Al bloquear este contacto se bloquean todos sus accesos e invitaciones activas.</string>
+    <string name="confirm_resident_popup_question_enable">¿Seguro quieres desbloquear a %s?</string>
+    <string name="confirm_resident_popup_question_enable_complement">Al desbloquear este contacto se desbloquean todos sus accesos e invitaciones activas.</string>
+    <string name="confirm_resident_blocking_resident">Bloqueando residente...</string>
+    <string name="confirm_resident_enabling_resident">Desbloqueando residente...</string>
+    <string name="confirm_resident_enable2">Desbloquear</string>
+    <string name="confirm_resident_resident_blocked2">Residente bloqueado</string>
+    <string name="confirm_resident_resident_blocked3">Residente bloqueado</string>
+    <string name="confirm_resident_block2">Bloquear</string>
+    <string name="confirm_resident_resident_enabled">Residente desbloqueado</string>
+    <string name="confirm_resident_btn_cancel">CANCELAR</string>
+    <string name="confirm_resident_sectors_all2">Todos</string>
+    <string name="confirm_resident_press_save_explanation">Recuerda presionar GUARDAR para que los cambios en los sectores se vean reflejados</string>
+    <!-- end confirm_resident -->
+
+    <!-- start contact_item -->
+    <string name="match_other_contact">Coincide con otro contacto</string>
+    <!-- end contact_item -->
+
+    <!-- start contact_list_fragment -->
+    <string name="contacts_not_found">No se encontraron contactos</string>
+    <!-- programmatically -->
+    <string name="contacts_grant">Dar permiso</string>
+    <!-- end contact_list_fragment -->
+
+    <!-- start activity_contacts -->
+    <string name="activity_contacts_continue_button">Invitar</string>
+    <!-- programmatically -->
+    <string name="contacts_title">Invitar</string>
+    <string name="contacts_pick_one_contact_at_least">Seleccione al menos un contacto</string>
+    <string name="contacts_invitation_customization_title">Invitar</string>
+    <string name="contacts_you_have_no_property">Usted no posee propiedad asociada a Safecard para invitar.</string>
+    <string name="contacts_you_have_no_available_property">Usted no tiene propiedades disponibles para poder invitar</string>
+    <string name="contacts_invitation_dialog_title">Invitación</string>
+    <string name="contacts_invitation_dialog_ok_button">OK</string>
+    <string name="contacts_done_button">INVITAR (%d)</string>
+    <string name="contacts_dialog_sending_invitation">Enviando invitación...</string>
+    <string name="contacts_wait_a_moment">Espera un momento</string>
+    <!-- end activity_contacts -->
+
+    <!-- start edit_profile -->
+    <string name="update_your_data_here">Edita tus datos a continuación</string>
+    <string name="edit_profile_name_placeholder">Nombre</string>
+    <string name="edit_profile_lastname_placeholder">Apellido</string>
+    <string name="edit_profile_email_placeholder">Email</string>
+    <string name="all_fields_are_required">Todos los campos son obligatorios</string>
+    <string name="edit_profile_continue_button">Actualizar</string>
+    <!-- programmatically -->
+    <string name="activity_edit_profile_title">Editar perfil</string>
+    <string name="activity_edit_profile_dialog_updating">Actualizando...</string>
+    <string name="activity_edit_profile_real_name_required">Nombre real es requerido</string>
+    <string name="activity_edit_profile_real_lastname_required">Apellido real es requerido</string>
+    <string name="activity_edit_profile_valid_email_required">Email válido es requerido</string>
+    <string name="activity_edit_profile_updated_succesfully">Datos modificados exitosamente.</string>
+    <string name="activity_edit_profile_error_while_updating_try_again">Ocurrió un error. Inténtelo nuevamente.</string>
+    <!-- end edit_profile -->
+
+    <!-- start fragment_access -->
+    <string name="this_code_changes_every_x_seconds">Este código QR cambia cada 5 segundos</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="gps">GPS</string>
+    <!-- end fragment_access -->
+
+    <!-- start fragment_invitations_list -->
+    <string name="you_dont_have_any_invitations">Usted no dispone de invitaciones.</string>
+    <string name="fragment_invitations_list_continue_button">Solicitar</string>
+    <!-- end fragment_invitations_list -->
+
+    <!-- start fragment_pick_contacts -->
+    <string name="fragment_pick_contacts_contacts_not_found">No se encontraron contactos</string>
+    <!-- programmatically -->
+    <string name="fragment_pick_contacts_grant">Dar permiso</string>
+    <!-- end fragment_pick_contacts -->
+
+    <!-- start geo_loading -->
+    <string name="make_sure_you_are_home_while_locate">Asegúrate de estar en tu propiedad para realizar la geolocalización.</string>
+    <string name="wait_a_moment_while_we_locate_your_home">Espera un momento mientras geolocalizamos tu propiedad.</string>
+    <string name="not_now_button">En otro momento</string>
+    <!-- end geo_loading -->
+
+    <!-- start invitation_item -->
+    <string name="invitation_item_monday_first_letter">L</string>
+    <string name="invitation_item_tuesday_first_letter">M</string>
+    <string name="invitation_item_wednesday_first_letter">X</string>
+    <string name="invitation_item_thursday_first_letter">J</string>
+    <string name="invitation_item_friday_first_letter">V</string>
+    <string name="invitation_item_saturday_first_letter">S</string>
+    <string name="invitation_item_sunday_first_letter">D</string>
+    <string name="invitation_item_blocked">Bloqueada</string>
+    <string name="invitation_item_request_accepted">Solicitud Aceptada</string>
+    <!-- end invitation_item -->
+
+    <!-- start login -->
+    <string name="use_your_pin_to_unlock">Ingresa tu PIN para desbloquear la aplicación</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+    <string name="number_0">0</string>
+    <!-- programmatically -->
+    <string name="login_biometric_title">Autenticación Biométrica</string>
+    <string name="login_biometric_description">Desbloquea Safecard utilizando lectura biométrica</string>
+    <string name="login_biometric_cancel_button">Cancelar</string>
+    <string name="login_invalid_password">Password inválido</string>
+    <!-- end login -->
+
+    <!-- start activity_log -->
+    <string name="advanced_search">Búsqueda Avanzada</string>
+    <string name="logs_from_date">Desde</string>
+    <string name="logs_to_date">Hasta</string>
+    <string name="logs_search_placeholder">Buscar</string>
+    <string name="logs_filter_button">Filtrar</string>
+    <!-- programmatically -->
+    <string name="log_title">Historial de accesos</string>
+    <string name="log_validation_from_date_has_to_be_smaller_than_to_date">La fecha \'Desde\' tiene que ser menor que la fecha \'Hasta\'.</string>
+    <string name="log_month_jan">ene</string>
+    <string name="log_month_feb">feb</string>
+    <string name="log_month_mar">mar</string>
+    <string name="log_month_apr">abr</string>
+    <string name="log_month_may">may</string>
+    <string name="log_month_jun">jun</string>
+    <string name="log_month_jul">jul</string>
+    <string name="log_month_aug">ago</string>
+    <string name="log_month_sep">sep</string>
+    <string name="log_month_oct">oct</string>
+    <string name="log_month_nov">nov</string>
+    <string name="log_month_dec">dic</string>
+    <!-- end activity_log -->
+
+    <!-- start menu_map_invitation -->
+    <string name="how_to_get_to">¿Cómo llegar?</string>
+    <!-- end menu_map_invitation -->
+
+    <!-- start activity_obsolete_version -->
+    <string name="obsolete_version_title">¡Oops!</string>
+    <string name="obsolete_version_text1">Ya es tiempo de actualizar a la nueva versión.</string>
+    <string name="obsolete_version_text2">Presiona actualizar y ve a tu tienda Play Store.</string>
+    <string name="update_app_button">Actualizar</string>
+    <!-- end activity_obsolete_version -->
+
+    <!-- start activity_other_device -->
+    <string name="activity_other_device_title">¡Oops!</string>
+    <string name="activity_other_device_text1">Este número de teléfono puede que haya sido registrado en otro dispositivo.</string>
+    <string name="activity_other_device_text2">Recuerda que solo puedes instalar Safecard en un dispositivo a la vez.</string>
+    <string name="verify_again">Verificar</string>
+    <!-- end activity_other_device -->
+
+    <!-- start activity_parking (payments) -->
+    <string name="blocked_due_to_pending_payment">Bloqueado por pago pendiente</string>
+    <string name="parking_verify_blocked_button">Verificar</string>
+    <string name="credit_card_explanation">Ahora vincula tu tarjeta de crédito y accede de manera fácil, rápida y segura a los parking con Safecard</string>
+    <string name="credit_card_explanation2">Sin filas para pagar ni billetes que no funcionan</string>
+    <string name="parking_enable_button">Habilitar</string>
+    <!-- programmatically -->
+    <string name="parking_title">Parking</string>
+    <string name="parking_you_must_activate_gps">Debes activar el GPS</string>
+    <string name="parking_you_must_grant_gps_access_permission">Debes activar el permiso de GPS</string>
+    <string name="parking_not_available">No disponible.</string>
+    <string name="parking_not_available2">No disponible</string>
+    <string name="activity_parking_no_google">No disponible por el momento en dispositivos Huawei</string>
+    <!-- end activity_parking (payments) -->
+
+    <!-- start property_plates_item (property_item)-->
+    <string name="property_plates_item_geolocated">Geolocalizada</string>
+    <!-- end property_plates_item (property_item) -->
+
+    <!-- start activity_register -->
+    <string name="register_title">Regístrate proporcionando tus datos a continuación</string>
+    <string name="register_name">Nombre</string>
+    <string name="register_lastname">Apellido</string>
+    <string name="register_email">e-mail</string>
+    <string name="register_all_fields_are_required">Todos los campos son obligatorios</string>
+    <string name="register_continue_button">Siguiente</string>
+    <!-- programmatically -->
+    <string name="activity_register_check_your_data_and_confirm">Revisa tus datos y confirma</string>
+    <string name="activity_register_validation_real_name_required">Nombre real es requerido</string>
+    <string name="activity_register_validation_real_lastname_required">Apellido real es requerido</string>
+    <string name="activity_register_validation_valid_mail_required">Email válido es requerido</string>
+    <string name="activity_register_title">Registro</string>
+    <!-- end activity_register -->
+
+    <!-- start activity_sms -->
+    <string name="sms_explanation">Safecard te enviará un SMS para verificar tu número de teléfono, introduce tu código de país y número de teléfono</string>
+    <string name="sms_phone_number_placeholder">Número de teléfono</string>
+    <string name="sms_continue_button">Siguiente</string>
+    <!-- programmatically -->
+    <string name="activity_sms_dialog_loading_wait_a_moment">Cargando. Espere un momento.</string>
+    <string name="activity_sms_title">Bienvenido</string>
+    <string name="activity_sms_validation_enter_your_phone_number">Ingrese su número de teléfono</string>
+    <string name="activity_sms_validation_invalid_phone_number">El número de teléfono está incompleto o es inválido</string>
+    <string name="activity_sms_dialog_title">Confirmación</string>
+    <string name="activity_sms_dialog_message_check_phone_number">¿Quieres verificar el número telefónico %s?</string>
+    <string name="activity_sms_dialog_ok_button">Sí</string>
+    <string name="activity_sms_dialog_cancel_button">No</string>
+    <string name="activity_sms_sending_sms">Enviando SMS. Espere un momento.</string>
+    <string name="activity_sms_verify_phone_number">Verificar número de teléfono</string>
+    <string name="activity_sms_it_seems_like_number_not_exist">Al parecer el número ingresado no existe. Inténtelo nuevamente</string>
+    <string name="activity_sms_dialog_ok_button2">OK</string>
+    <string name="activity_sms_validation_required_field">Campo requerido</string>
+    <!-- end activity_sms -->
+
+    <!-- start activity_splash_screen -->
+    <string name="three_retries_msg">Safecard necesita conexión a internet para actualizar tus datos.</string>
+    <!-- programmatically -->
+    <string name="activity_splash_screen_hms_not_found_title">Safecard App versión Huawei</string>
+    <string name="activity_splash_screen_hms_not_found_message">Necesitas un dispositivo Huawei y Huawei Mobile Services (HMS) para usar esta app</string>
+    <string name="activity_splash_screen_hms_not_found_button">Cerrar App</string>
+    <!-- end activity_splash_screen -->
+
+    <!-- start update_available -->
+    <string name="update_available_explanation">Esta versión de Safecard requiere una actualización. ¿Deseas actualizar a la versión más reciente?</string>
+    <string name="update_available_ok_button">ACTUALIZAR</string>
+    <string name="update_available_cancel_button">CANCELAR</string>
+    <!-- end update_available -->
+
+    <!-- start activity_verify -->
+    <string name="verify_waiting_text">Esperando para validar el código enviado al número de teléfono [MOBILE]</string>
+    <string name="six_digits_code_placeholder">Introduce el código de 6 dígitos</string>
+    <string name="wrong_number">¿Número equivocado?</string>
+    <string name="send_sms_again">Enviar SMS de nuevo</string>
+    <string name="call_me">Llámame</string>
+    <string name="verify_continue_button">Siguiente</string>
+    <!-- programmatically -->
+    <string name="activity_verify_title">Código de verificación</string>
+    <string name="activity_verify_dialog_loading_wait_a_moment">Cargando. Espere un momento.</string>
+    <string name="activity_verify_dialog_requesting_code">Solicitando código...</string>
+    <string name="activity_verify_dialog_sms_sent_wait_a_moment">SMS enviado. Espere un momento.</string>
+    <string name="activity_verify_error_try_again">Ocurrió un error. Inténtelo nuevamente</string>
+    <string name="activity_verify_error_try_again2">Ocurrió un error. Inténtelo nuevamente</string>
+    <string name="activity_verify_youll_get_a_call_in_a_moment">En un momento una operadora se comunicará con usted. Espere un momento.</string>
+    <string name="activity_verify_dialog_requesting_call">Solicitando llamada...</string>
+    <string name="activity_verify_required_field">Campo requerido</string>
+    <string name="activity_verify_checking_code">Verificando código...</string>
+    <string name="activity_verify_three_retries_msg">Safecard necesita conexión a internet para actualizar tus datos.</string>
+    <string name="activity_verify_required_field2">Campo requerido</string>
+    <!-- end activity_verify -->
+
+    <!-- start menu -->
+    <string name="action_logs">Logs</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_search">Buscar nombre o número</string>
+    <string name="action_map">Mapa</string>
+    <string name="action_phone_call">Llamar Conserjería</string>
+    <!-- end menu -->
+
+    <!-- start bottom_menu -->
+    <string name="bottom_menu_invite">Invitar</string>
+    <string name="bottom_menu_invitations">Invitaciones</string>
+    <string name="bottom_menu_accesses">Accesos</string>
+    <string name="bottom_menu_parking">Parking</string>
+    <!-- end bottom_menu -->
+
+    <!-- start activity_defaults_access_type -->
+    <!-- programmatically -->
+    <string name="access_default_sector_activity_title">Tipo de acceso por defecto</string>
+    <!-- end activity_defaults_access_type -->
+
+    <!-- start activity_access_type_default -->
+    <!-- programmatically -->
+    <string name="activity_access_type_default_title">Accesos por defecto</string>
+    <!-- end activity_access_type_default -->
+
+    <!-- start activity_access_visit -->
+    <!-- programmatically -->
+    <string name="activity_access_visit_no_geolocated_cant_be_shown_in_map">Recinto no geolocalizado. No se puede ubicar en el mapa.</string>
+    <string name="activity_access_visit_map_not_available">Mapa no disponible</string>
+    <string name="activity_access_visit_no_google">No disponible por el momento en dispositivos Huawei</string>
+    <!-- end activity_access_visit -->
+
+    <!-- start programmatically invitation summary -->
+    <string name="summary_guest_name_and_n_more">%s y %s más</string>
+    <string name="summary_who_and_where_case_to">Invitación para %s a %s</string>
+    <string name="summary_who_and_where_case_from">Invitación de %s a %s</string>
+    <string name="summary_dates">Desde el %s hasta el %s</string>
+    <string name="summary_times">Entre %s hrs. y %s hrs.</string>
+    <string name="summary_date_one_day">Para el %s</string>
+    <string name="summary_dates_times_two_days">Desde el %s a las %s hrs. Hasta el %s a las %s hrs.</string>
+    <string name="summary_times_all_day">Por todo el día</string>
+    <string name="summary_days_of_week_all">Para todos los días de la semana</string>
+    <string name="summary_days_of_week">Para los días %s</string>
+    <string name="summary_sectors_all">Para todos los sectores</string>
+    <string name="summary_sectors">Para los sectores: %s</string>
+    <string name="summary_plates">Vinculada a la patente %s</string>
+    <!-- end programmatically invitation summary -->
+    
+    <!-- start activity_contact_resident -->
+    <!-- programmatically -->
+    <string name="contact_resident_title">Seleccionar contacto</string>
+    <!-- end activity_contact_resident -->
+
+    <!-- start activity_default_sector -->
+    <!-- programmatically -->
+    <string name="default_sector_title">Sector por defecto</string>
+    <!-- end activity_default_sector -->
+
+    <!-- start activity_default_sector_properties -->
+    <!-- programmatically -->
+    <string name="default_sector_properties_title">Selecciona propiedad</string>
+    <!-- end activity_default_sector_properties -->
+
+    <!-- start activity_houses_residents -->
+    <!-- programmatically -->
+    <string name="houses_residents_title">Selecciona propiedad</string>
+    <string name="houses_residents_no_privileges">No tienes privilegios para realizar esta acción</string>
+    <!-- end activity_houses_residents -->
+
+    <!-- start activity_invitation -->
+    <!-- programmatically -->
+    <string name="invitation_title">Invitaciones</string>
+    <string name="invitation_loading_wait_a_moment">Cargando. Espere un momento.</string>
+    <string name="invitation_deleting_invitations_wait_a_moment">Eliminando invitaciones. Espere un momento</string>
+    <string name="invitation_invitations_deleted_successfully">Invitaciones eliminadas con éxito</string>
+    <string name="invitation_loading_invitation_wait_a_moment">Obteniendo invitación. Espere un momento...</string>
+    <string name="invitation_wait_a_moment">Espere un momento ...</string>
+    <string name="invitation_invitation_customization_title">Solicitar</string>
+    <string name="invitation_wait_a_moment2">Espere por favor ...</string>
+    <string name="invitation_request_sent">La solicitud ha sido enviada</string>
+    <string name="invitation_accepting_invitation_request">Aceptando Petición de invitación...</string>
+    <string name="invitation_request_accepted">La solicitud ha sido aceptada</string>
+    <string name="invitation_wait_a_moment3">Espere por favor...</string>
+    <string name="invitation_request_rejected">La solicitud ha sido rechazada</string>
+    <string name="invitation_wait_a_moment4">Espere por favor...</string>
+    <string name="invitation_request_sent_again">La solicitud ha sido reenviada</string>
+    <string name="invitation_wait_a_moment5">Espere por favor...</string>
+    <string name="invitation_request_notified_again">La solicitud ha sido renotificada</string>
+    <!-- end activity_invitation -->
+
+    <!-- start activity_list_plate -->
+    <!-- programmatically -->
+    <string name="list_plate_wait_while_loading_data">Espera mientras cargamos la información</string>
+    <string name="list_plate_you_have_no_plates">No dispones de patentes vinculadas</string>
+    <string name="list_plate_you_must_select_one_plate_at_least">Debes seleccionar al menos 1 patente</string>
+    <string name="list_plate_are_you_sure_about_delete_these_plates">¿Estás seguro que quieres eliminar estas patentes?</string>
+    <string name="list_plate_dialog_yes">SI</string>
+    <string name="list_plate_dialog_deleting_plates">Eliminando patente(s).</string>
+    <string name="list_plate_dialog_plates_deleted_successfully">Patentes eliminadas con éxito</string>
+    <string name="list_plate_dialog_no">NO</string>
+    <!-- end activity_list_plate -->
+
+    <!-- start activity_notification -->
+    <!-- programmatically -->
+    <string name="notification_title">Notificaciones</string>
+    <!-- end activity_notification -->
+
+    <!-- start activity_parking_map -->
+    <string name="parking_map_title">Mapa Parkings</string>
+    <string name="parking_map_no_available">Google Maps no disponible</string>
+    <string name="parking_map_dialog_loading_wait_a_moment">Cargando Parkings. Espere un momento</string>
+    <string name="parking_map_distance_x_meters">Distancia %s mts.</string>
+    <!-- end activity_parking_map -->
+
+    <!-- start activity_pick_properties -->
+    <!-- programmatically -->
+    <string name="activity_pick_properties_title">Selecciona propiedad</string>
+    <string name="activity_pick_properties_dialog_continue_button">CONTINUAR</string>
+    <string name="activity_pick_properties_dialog_cancel_button">CANCELAR</string>
+    <string name="activity_pick_properties_dialog_ok_button">OK</string>
+    <!-- end activity_pick_properties -->
+
+    <!-- start activity_pick_sectors -->
+    <!-- programmatically -->
+    <string name="activity_pick_sectors_dialog_title">Sectores</string>
+    <string name="activity_pick_sectors_dialog_select_one_sector_at_least">Debes seleccionar al menos un sector</string>
+    <string name="activity_pick_sectors_dialog_ok_button">OK</string>
+    <!-- end activity_pick_sectors -->
+
+    <!-- start activity_residents_ -->
+    <!-- programmatically -->
+    <string name="activity_residents_no_privileges">No tienes privilegios para realizar esta acción</string>
+    <string name="activity_residents_owner_cant_be_edited">No es posible editar propietarios</string>
+    <!-- end activity_residents_ -->
+
+    <!-- start activity_tour -->
+    <string name="activity_tour_i_understand">¡Entendido!</string>
+    <!-- programmatically -->
+    <string name="activity_tour_text_0">Desliza tu dedo hacia la izquierda para avanzar o hacia la derecha para retroceder  en el tour.</string>
+    <string name="activity_tour_text_1">Usa el control remoto para acceder o salir de tu propiedad y ejecutar la apertura de barreras o portones\n\nPresentando el código QR en los iSafe (totem), también puedes ejecutar la apertura de torniquetes, puertas, mamparas o cualquier dispositivo compatible con Safecard.</string>
+    <string name="activity_tour_text_2">Con Safecard puedes enviar invitaciones a tus contactos para que accedan a tu propiedad de forma rápida y segura.</string>
+    <string name="activity_tour_text_3">Ahora puedes crear residentes directamente desde tu aplicación en el menú “Ajustes”.\n\nPuedes definir distintos niveles de seguridad, para cada uno de los residentes de tu propiedad.</string>
+    <string name="activity_tour_text_4">Revisa todo el historial de accesos con un simple clic, como propietario podrás además, ver los movimientos de todos los residentes asociados a tu propiedad.</string>
+    <!-- end activity_tour -->
+
+    <!-- start activity_webpay_enrollment_update -->
+    <!-- programmatically -->
+    <string name="activity_webpay_enrollment_update_title">Tarjetas de Crédito</string>
+    <string name="activity_webpay_enrollment_update_dialog_title_default_credit_card">Tarjeta por defecto</string>
+    <string name="activity_webpay_enrollment_update_dialog_change_default_credit_card">¿Seguro quieres cambiar tu tarjeta por defecto a \'%s\'?</string>
+    <string name="activity_webpay_enrollment_update_dialog_accept_button">ACEPTAR</string>
+    <string name="activity_webpay_enrollment_update_dialog_cancel_button">CANCELAR</string>
+    <string name="activity_webpay_enrollment_update_must_choose_one_card_at_least">Debes seleccionar al menos 1 tarjeta</string>
+    <string name="activity_webpay_enrollment_update_dialog_confirm_delete_cards">¿Estás seguro que quieres eliminar estas tarjetas?</string>
+    <string name="activity_webpay_enrollment_update_dialog_deleting_cards">Eliminando Tarjeta(s) de Crédito(s).</string>
+    <string name="activity_webpay_enrollment_update_dialog_yes_button">SI</string>
+    <string name="activity_webpay_enrollment_update_dialog_no_button">NO</string>
+    <!-- end activity_webpay_enrollment_update -->
+
+    <!-- start activity_webpay_enrollment_webview -->
+    <!-- programmatically -->
+    <string name="activity_webpay_enrollment_webview_wait_a_moment">Espere por Favor...</string>
+    <!-- end activity_webpay_enrollment_webview -->
+
+    <!-- start activity_pick_phone_numbers -->
+    <!-- programmatically -->
+    <string name="activity_pick_phone_numbers_title">Elige a quien llamar</string>
+    <!-- end activity_pick_phone_numbers -->
+
+    <!-- start adapters -->
+    <string name="adapter_defaults_access_type_only_remote_control">Este sector sólo tiene habilitado acceso por control remoto</string>
+    <string name="adapter_defaults_access_type_only_qr_control">Este sector sólo tiene habilitado acceso por QR</string>
+    <string name="adapter_defaults_access_type_month_jan">Ene.</string>
+    <string name="adapter_defaults_access_type_month_feb">Feb.</string>
+    <string name="adapter_defaults_access_type_month_mar">Mar.</string>
+    <string name="adapter_defaults_access_type_month_apr">Abr.</string>
+    <string name="adapter_defaults_access_type_month_may">May.</string>
+    <string name="adapter_defaults_access_type_month_jun">Jun.</string>
+    <string name="adapter_defaults_access_type_month_jul">Jul.</string>
+    <string name="adapter_defaults_access_type_month_aug">Ago.</string>
+    <string name="adapter_defaults_access_type_month_sep">Sep.</string>
+    <string name="adapter_defaults_access_type_month_oct">Oct.</string>
+    <string name="adapter_defaults_access_type_month_nov">Nov.</string>
+    <string name="adapter_defaults_access_type_month_dec">Dic.</string>
+
+    <string name="adapter_invitations_subject">Asunto: %s</string>
+    <string name="adapter_invitations_no_subject">Sin asunto</string>
+    <string name="adapter_invitations_deleted">Eliminada</string>
+    <string name="adapter_invitations_blocked">Bloqueada</string>
+    <string name="adapter_invitations_expired">Vencida</string>
+    <string name="adapter_invitations_plate">Pantente: %s</string>
+    <string name="adapter_invitations_not_available">Información no disponible</string>
+    <string name="adapter_invitations_date">Para el: %s</string>
+    <string name="adapter_invitations_from">Desde</string>
+    <string name="adapter_invitations_to">Hasta</string>
+    <string name="adapter_invitations_all_day">Por todo el día</string>
+    <string name="adapter_invitations_between">Entre %s hrs. y %s hrs.</string>
+    <string name="adapter_invitations_two_days_plus_hours">Desde: %s a las %s\nHasta: %s a las %s</string>
+    <string name="adapter_invitations_every_day_of_week">Para todos los días de la semana</string>
+
+    <string name="adapter_invitation_type_received">Recibidas</string>
+    <string name="adapter_invitation_type_sent">Enviadas</string>
+    <string name="adapter_invitation_type_requested">Solicitadas</string>
+
+    <string name="adapter_log_service">Servicio %s</string>
+    <string name="adapter_log_not_out_yet">Alerta: Aún no se ha retirado</string>
+    <string name="adapter_log_authorized_by">Autorizó: %s</string>
+    <string name="adapter_log_hours">%s hrs</string>
+
+    <string name="adapter_resident_owner">Propietario</string>
+    <string name="adapter_resident_resident_admin">Residente Admin</string>
+    <string name="adapter_resident_resident">Residente</string>
+    <string name="adapter_resident_blocked_resident">Residente bloqueado</string>
+    <string name="adapter_resident_user_not_registered">Usuario no registrado en Safecard</string>
+    <!-- end adapters -->
+
+    <!-- start service_notifications -->
+    <string name="service_notifications_channel_name">Importantes</string>
+    <string name="service_notifications_channel_description">Notificaciones importantes.</string>
+    <string name="service_notifications_channel_calls">Videollamadas</string>
+    <string name="service_notifications_channel_calls_description">Notificaciones de videollamadas.</string>
+    <!-- end service_notifications -->
+
+    <!-- start request_volley -->
+    <string name="request_volley_error_connection_not_active">La conexión a internet parece estar desactivada</string>
+    <string name="request_volley_error_timeout">Se agotó el tiempo de espera</string>
+    <string name="request_volley_error_try_later">Problema de comunicación, reintente más tarde.</string>
+    <string name="request_volley_error_connection_not_active2">La conexión a internet parece estar desactivada</string>
+    <string name="request_volley_error_timeout2">Se agotó el tiempo de espera</string>
+    <string name="request_volley_error_try_later2">Problema de comunicación, reintente más tarde.</string>
+    <!-- end request_volley -->
+
+    <!-- start fragments -->
+    <string name="fragment_msg_you_have_no_properties">Usted no dispone de propiedades.</string>
+    <string name="fragment_msg_expired_invitation">Invitación expirada</string>
+
+    <string name="fragment_contacts_list_contacts_access_request_message">Safecard necesita obtener tu lista de contactos.</string>
+    <string name="fragment_contacts_list_contacts_access_request_message2">Safecard necesita obtener tu lista de contactos.</string>
+    
+    <string name="fragment_invitation_list_dialog_title_disabled_invitation">Invitación deshabilitada</string>
+    <string name="fragment_invitation_list_dialog_content_disabled_invitation">Invitación deshabilitada. Acérquese a conserjería.</string>
+    <string name="fragment_invitation_list_dialog_ok_button">OK</string>
+    <string name="fragment_invitation_list_dialog_content_delete_confirmation">¿Estás seguro que quieres eliminar estas invitaciones?</string>
+    <string name="fragment_invitation_list_dialog_ok_button2">SI</string>
+    <string name="fragment_invitation_list_dialog_no_button">NO</string>
+    <string name="fragment_invitation_list_must_select_one_invitation_at_least">Debes seleccionar al menos 1 invitación</string>
+    <string name="fragment_invitation_list_invitations_active">Activas</string>
+    <string name="fragment_invitation_list_invitations_inactive">Inactivas</string>
+    <string name="fragment_invitation_list_invitations_requested_received">Recibidas</string>
+    <string name="fragment_invitation_list_invitations_requested_pending">Solicitadas pendientes</string>
+    <string name="fragment_invitation_list_invitations_requested_rejected">Rechazadas</string>
+
+    <string name="fragment_pick_contacts_contacts_access_request_message">Safecard necesita obtener tu lista de contactos.</string>
+    <string name="fragment_pick_contacts_contacts_access_request_message2">Safecard necesita obtener tu lista de contactos.</string>
+
+    <string name="fragment_rcqr_info_gps_or_wifi_local">Es necesario habilitar el GPS o conectarse a Wi-Fi local Safecard</string>
+    <string name="fragment_rcqr_requesting_opening_wait_a_moment">Solicitando apertura. Por favor espere un momento.</string>
+    <string name="fragment_rcqr_dialog_title_request_wifi_local">Conéctate al Wi-Fi local</string>
+    <string name="fragment_rcqr_dialog_message_request_wifi_local"><![CDATA[Cuando estás conectado al Wi-Fi local, Safecard opera más rápido porque tu celular interactúa directamente con el servidor ubicado en tu recinto. <br/><br/> ¿Conectar ahora?]]></string>
+    <string name="fragment_rcqr_dialog_message_cancel_button">CANCELAR</string>
+    <string name="fragment_rcqr_dialog_message_accept_button">ACEPTAR</string>
+    <string name="fragment_rcqr_dialog_title_request_gps">Activa el GPS</string>
+    <string name="fragment_rcqr_dialog_message_request_gps"><![CDATA[Para poder operar el control remoto es necesario validar tu ubicación. <br/><br/> Si estás conectado al Wi-Fi Local no es obligatorio el GPS para operar el control remoto. <br/><br/> ¿Activar GPS ahora?]]></string>
+    <string name="fragment_rcqr_dialog_message_cancel_button2">CANCELAR</string>
+    <string name="fragment_rcqr_dialog_message_accept_button2">ACEPTAR</string>
+    <string name="fragment_rcqr_wifi_local">Wi-Fi local</string>
+    <string name="fragment_rcqr_wifi_local_ok">Ok</string>
+    <string name="fragment_rcqr_wifi_local_connect">(!) Conectar</string>
+    <string name="fragment_rcqr_gps">GPS</string>
+    <string name="fragment_rcqr_gps_no_permission">(!) Sin permiso</string>
+    <string name="fragment_rcqr_gps_locating">Localizando</string>
+    <string name="fragment_rcqr_gps_ok">Ok</string>
+    <string name="fragment_rcqr_gps_activate">(!) Activar</string>
+    <!-- end fragments -->
+
+    <!-- start nothing -->
+    <string name="nothing">nothing</string>
+    <!-- end nothing -->
+
+    <string name="activity_geo_houses_hold_marker_to_move_it">Mantén presionado el marcador rojo para desplazarlo.</string>
+
+</resources>

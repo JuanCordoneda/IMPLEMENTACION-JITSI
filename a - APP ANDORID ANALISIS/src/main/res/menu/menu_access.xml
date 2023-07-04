@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_logs"
+        android:icon="@drawable/ic_history_white"
+        android:orderInCategory="1"
+        android:title="@string/action_logs"
+        app:showAsAction="ifRoom|withText"
+        android:tint="@android:color/darker_gray"/>
+
+    <item
+        android:id="@+id/action_call_phone"
+        android:icon="@drawable/ic_call"
+        android:orderInCategory="2"
+        android:title="@string/action_phone_call"
+        app:showAsAction="ifRoom|withText"
+        android:tint="@android:color/darker_gray"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_ajustes"
+        android:orderInCategory="2"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom|withText"
+        android:tint="@android:color/darker_gray"/>
+
+    <!--<item android:id="@+id/action_bar_remote"
+        android:icon="@drawable/ic_change_cr"
+        android:title="@string/action_change_cr"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="2"
+        android:visible="false"/>
+
+    <item android:id="@+id/action_bar_qr"
+        android:icon="@drawable/ic_change_qr"
+        android:title="@string/action_change_qr"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="3"
+        android:visible="false"/>-->
+
+</menu>

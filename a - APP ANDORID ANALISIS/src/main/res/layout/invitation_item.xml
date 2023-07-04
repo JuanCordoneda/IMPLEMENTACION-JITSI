@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/invitation_item"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:clickable="true"
+	android:background="@drawable/backcolor"
+	android:orientation="horizontal">
+
+	<LinearLayout
+		android:id="@+id/checkbox_lay"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="13dp"
+		android:layout_marginLeft="@dimen/activity_vertical_margin"
+		android:layout_marginTop="13dp"
+		android:orientation="vertical"
+		android:visibility="visible">
+
+		<androidx.appcompat.widget.AppCompatCheckBox
+			android:id="@+id/check_box"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:button="@drawable/checkbox"
+			android:checked="false"
+			android:clickable="false"
+			android:gravity="start" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:orientation="horizontal"
+		android:paddingBottom="13dp"
+		android:paddingEnd="@dimen/activity_vertical_margin"
+		android:paddingLeft="@dimen/activity_vertical_margin"
+		android:paddingRight="@dimen/activity_vertical_margin"
+		android:paddingStart="@dimen/activity_vertical_margin"
+		android:paddingTop="13dp"
+		android:weightSum="46">
+
+		<ImageView
+			android:id="@+id/view_inv"
+			android:layout_width="0dp"
+			android:layout_height="8dp"
+			android:layout_marginEnd="@dimen/activity_margin_half"
+			android:layout_marginRight="@dimen/activity_margin_half"
+			android:layout_marginTop="4dp"
+			android:background="@drawable/indicator_selected"
+			android:visibility="visible"
+			android:layout_weight="1"/>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="30"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/subject"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center|left"
+				android:maxLines="3"
+				android:text="[Motivo]"
+				android:textColor="@color/cool_grey"
+				android:textSize="14dp"
+				android:visibility="visible"
+				tools:ignore="HardcodedText" />
+
+			<TextView
+				android:id="@+id/organizer_name"
+				android:fontFamily="@font/roboto_regular"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center|left"
+				android:lines="1"
+				android:text="[Organizador]"
+				android:textColor="@color/white"
+				android:textSize="16dp"
+				tools:ignore="HardcodedText" />
+
+			<TextView
+				android:id="@+id/recinto"
+				android:fontFamily="@font/roboto_medium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center|left"
+				android:lines="1"
+				android:text="[Recinto - propiedad]"
+				android:textColor="@color/cool_grey"
+				android:textSize="14dp"
+				tools:ignore="HardcodedText" />
+
+			<TextView
+				android:id="@+id/start_end_date"
+				android:fontFamily="@font/roboto_regular"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center|left"
+				android:maxLines="4"
+				android:text="[Fecha]"
+				android:textColor="@color/cool_grey"
+				android:textSize="14dp"
+				tools:ignore="HardcodedText" />
+
+			<TextView
+				android:id="@+id/plate"
+				android:fontFamily="@font/roboto_regular"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center|left"
+				android:maxLines="4"
+				android:text="[Patente]"
+				android:textColor="@color/cool_grey"
+				android:textSize="14dp"
+				tools:ignore="HardcodedText" />
+
+			<LinearLayout
+				android:id="@+id/days_list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal">
+
+				<TextView
+					android:id="@+id/lun"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_monday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+
+				<TextView
+					android:id="@+id/mar"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_tuesday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+
+				<TextView
+					android:id="@+id/mie"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_wednesday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+
+				<TextView
+					android:id="@+id/jue"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_thursday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+
+				<TextView
+					android:id="@+id/vie"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_friday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+
+				<TextView
+					android:id="@+id/sab"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_saturday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+
+				<TextView
+					android:id="@+id/dom"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:layout_gravity="center"
+					android:gravity="center_vertical|center_horizontal"
+					android:text="@string/invitation_item_sunday_first_letter"
+					android:textColor="@color/darkergray"
+					android:textSize="14dp" />
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="15"
+			android:gravity="right"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/status_invitation"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/label_border"
+				android:gravity="right"
+				android:padding="4dp"
+				android:text="[blocked]"
+				android:textColor="@color/white"
+				android:textSize="10sp"
+				android:visibility="gone" />
+
+			<TextView
+				android:id="@+id/request_accepted_tag"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/button_green"
+				android:gravity="center"
+				android:padding="4dp"
+				android:text="@string/invitation_item_request_accepted"
+				android:textColor="@color/white"
+				android:textSize="10sp"
+				android:visibility="gone" />
+
+			<ImageView
+				android:id="@+id/share_inv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:elevation="24dp"
+				android:visibility="gone"
+				app:srcCompat="@drawable/ic_share" />
+
+			<LinearLayout
+				android:id="@+id/btn_request"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:clickable="false"
+				android:orientation="horizontal"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical|end"
+				android:visibility="gone">
+
+				<TextView
+					android:id="@+id/btn_request_accept"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:background="@drawable/ic_done"
+					android:padding="8dp"
+					android:text=""
+					android:textColor="@color/white"
+					android:textSize="12sp"
+					android:layout_marginRight="12dp"
+					android:layout_marginEnd="12dp" />
+
+				<TextView
+					android:id="@+id/btn_request_reject"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:background="@drawable/ic_reject"
+					android:padding="8dp"
+					android:text=""
+					android:textColor="@color/white"
+					android:textSize="12sp"/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/btn_remind_container"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:clickable="false"
+				android:orientation="horizontal"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical|end"
+				android:visibility="gone">
+
+				<TextView
+					android:id="@+id/btn_remind"
+					android:layout_width="22dp"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ic_notification"
+					android:padding="8dp"
+					android:text=""
+					android:textColor="@color/white"
+					android:textSize="12sp"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/btn_re_request_container"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:clickable="false"
+				android:orientation="horizontal"
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical|end"
+				android:visibility="gone">
+
+				<TextView
+					android:id="@+id/btn_re_request"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ic_reload"
+					android:padding="8dp"
+					android:text=""
+					android:textColor="@color/white"
+					android:textSize="12sp"/>
+
+			</LinearLayout>
+
+			<ImageView
+				android:id="@+id/detail_inv"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical|end"
+				android:src="@drawable/ic_chevron_right_white_24dp"
+				android:visibility="gone" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+</LinearLayout>

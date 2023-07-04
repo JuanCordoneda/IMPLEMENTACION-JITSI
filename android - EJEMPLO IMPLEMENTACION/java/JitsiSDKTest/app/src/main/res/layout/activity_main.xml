@@ -1,0 +1,43 @@
+El código XML proporcionado describe el diseño de la interfaz de usuario de la actividad MainActivity utilizando el ConstraintLayout de AndroidX
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!-- El elemento <Button> representa un botón en la interfaz de usuario. 
+Aquí se establecen varias propiedades: -->
+    <Button
+        android:id="@+id/button4" define un identificador único para el botón.
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginStart="161dp" 
+        android:layout_marginTop="8dp" 
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="342dp"
+        android:onClick="onButtonClick" define el método que se ejecutará cuando se haga clic en el botón.
+        android:text="Join" establece el texto que se muestra en el botón.
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conferenceName" /> definen las restricciones del botón en relación con otros elementos en el diseño.
+
+    <EditText
+        android:id="@+id/conferenceName" define un identificador único para el campo de texto.
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="Enter conference name..."
+        android:ems="10" establece el ancho del campo de texto para mostrar aproximadamente 10 caracteres.
+        android:inputType="textPersonName" indica el tipo de entrada esperada en el campo de texto.
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /> definen las restricciones del campo de texto en relación con otros elementos en el diseño.
+
+</androidx.constraintlayout.widget.ConstraintLayout>

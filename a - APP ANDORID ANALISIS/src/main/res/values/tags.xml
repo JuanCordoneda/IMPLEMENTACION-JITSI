@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_barrier_code" type="id" />
+    <item name="tag_barrier_type" type="id" />
+    <item name="tag_barrier_name" type="id" />
+    <item name="tag_student" type="id" />
+</resources>

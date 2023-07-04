@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/backcolor"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_container">
+
+        <ImageView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_out" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/linear_layout1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/date_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="center|start"
+                android:text="[Date]"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:text="[Time]"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time_log"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:gravity="end"
+                android:textSize="16dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/relation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/strongray"
+                android:gravity="center|start"
+                android:text="[Relacion]"
+                android:layout_marginBottom="3dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/guest_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/strongray"
+                android:gravity="center|start"
+                android:text="[Guest name]"
+                android:layout_marginBottom="3dp"
+                android:maxLines="1"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/authorized_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/strongray"
+                android:gravity="center|start"
+                android:text="[Autorizó: authorizator]"
+                android:layout_marginBottom="3dp"
+                android:maxLines="1"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:text="[Sector / Barrera: ...]"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sector_gate"
+                android:textColor="@color/strongray"
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:id="@+id/loading_layout">
+
+        <ImageView
+            android:id="@+id/img_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_help" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

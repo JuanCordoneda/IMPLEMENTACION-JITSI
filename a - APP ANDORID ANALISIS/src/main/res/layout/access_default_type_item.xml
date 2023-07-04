@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginEnd="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin"
+    android:layout_marginStart="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_margin_half"
+    android:layout_marginBottom="@dimen/activity_margin_half">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:elevation="12dp">
+
+        <TextView
+            android:text="[Condo]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/condo_name"
+            android:textColor="@color/cool_grey"
+            android:lines="1"
+            android:textSize="14dp"
+            android:fontFamily="@font/roboto_medium"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:text="[Property]"
+            android:id="@+id/house_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:gravity="center_vertical|start"
+            android:lines="1"
+            android:fontFamily="@font/roboto_medium"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:layout_weight="2"
+        android:gravity="right">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_change_cr"
+            android:background="@drawable/circle_control"
+            android:id="@+id/cr_default"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_change_qr"
+            android:background="@drawable/circle_control"
+            android:id="@+id/qr_default"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

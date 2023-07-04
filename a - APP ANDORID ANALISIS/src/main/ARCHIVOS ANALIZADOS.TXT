@@ -1,0 +1,12 @@
+EN ESTOS ARCHIVOS PUDE ENCONTRAR VARIAS IMPLEMENTACIONES A JITSI.
+POR LO CUAL PROCEDI A HACERLES UN ANALISIS, COMENTANDO LAS FUNCIONALIDADES DE LOS MISMOS:
+
+(APRETAR CTRL + P Y COPIAR LOS PATHS)
+
+\src\main\java\com\safecard\android\utils\CallUtils.java
+
+\src\main\java\com\safecard\android\activities\IncomingCallActivity.java
+
+\src\main\java\com\safecard\android\activities\SplashScreenActivity.java
+
+\src\main\java\com\safecard\android\services\NotificationUtils2.java

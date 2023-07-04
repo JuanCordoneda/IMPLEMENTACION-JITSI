@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:id="@+id/empty_invitation"
+        android:layout_above="@+id/btn_request_invitation_container">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_no_invitation"
+            android:id="@+id/imageView4"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="@string/you_dont_have_any_invitations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/imageView4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/invitations_list"
+        android:layout_gravity="center_horizontal"
+        android:divider="@drawable/list_divider"
+        android:clickable="true"
+        android:visibility="visible"
+        android:layout_above="@+id/btn_request_invitation_container"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_request_invitation_container">
+
+        <Button
+            android:id="@+id/btn_request_invitation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="@string/fragment_invitations_list_continue_button"
+            android:visibility="visible"
+            android:theme="@style/AppThemeForm.Button"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
